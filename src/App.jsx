@@ -1,13 +1,24 @@
 import { Routes, Route } from "react-router";
 
-import Teste from "./pages/teste";
-import Teste2 from "./pages/teste2";
+// layout das paginas
+import MainLayout from "./components/layouts/MainLayout";
+
+// paginas
+import Home from "./pages/home/home";
+import Solucoes from "./pages/solucoes/solucoes";
+import QuemSomos from "./pages/quemSomos/quemSomos";
+import FaleConosco from "./pages/faleConosco/faleConosco";
+
 
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Teste/>} />
-      <Route path="/Teste2" element={<Teste2 />} />
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/solucoes" element={<Solucoes />} />
+        <Route path="/quem-somos" element={<QuemSomos />} />
+        <Route path="/fale-conosco" element={<FaleConosco />} />
+      </Route>
     </Routes>
   );
 }
