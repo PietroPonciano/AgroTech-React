@@ -1,0 +1,65 @@
+.footer-container{
+    background-color: var(--cor-secundaria);
+    padding: 3rem 5vw;
+}
+
+.footer-logo {
+    font-family: var(--fonte-titulo), serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.footer-logo-agro {
+    color: var(--cor-destaque);
+}
+
+.footer-logo-tech {
+    color: var(--texto-branco-puro);
+}
+
+.footer-texto-medio{
+    font-size: 0.875rem;
+    color: var(--texto-branco-medio);
+}
+
+.footer-texto-fraco{
+    font-size: 0.8125rem;
+    color: var(--texto-branco-fraco);
+}
+
+.footer-titulo{
+    font-size: 0.875rem;
+    color: var(--texto-branco-puro);
+    font-weight: 600;
+}
+
+.footer-navegacao-pagina {
+    border-radius: 0.3rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-navegacao-pagina:hover {
+    background-color: var(--cor-hover-azul);
+    transform: translateX(4px);
+}
+
+.footer-pitch-link {
+    gap: 15px;
+}
+
+.footer-copyright {
+    font-size: 0.85rem;
+}
+
+.footer-pitch .bi-play-circle-fill{
+    color: var(--cor-destaque);
+    font-size: 3.5rem;
+    font-weight: 800;
+    transition: transform 0.2s ease;
+}
+
+.footer-pitch .bi-play-circle-fill:hover{
+    transform: scale(1.15);
+}
+
+
