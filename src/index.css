@@ -1,0 +1,63 @@
+:root {
+    /* Cores */
+
+    --cor-primaria: #059b9a;
+    --cor-secundaria: #095169;
+
+    /* cores para textos */
+    --cor-texto: #0c0636;
+    --texto-branco-puro: #fff;
+    --texto-branco-medio: rgba(255, 255, 255, 0.85);
+    --texto-branco-fraco: rgba(255, 255, 255, 0.60);
+
+
+    /* cores de fundo */
+    --cor-fundo-claro: #f5f5f5;
+
+    /* cores para hover */
+    --cor-hover: #dff0df;
+    --cor-hover-azul: #059b9b27;
+
+    /* cores de borda */
+    --cor-borda-cinza: #e5e7eb;
+    --cor-borda-suave: #eaf5ea;
+
+    /* cores para botao */
+    --cor-botao: #059b9b80;
+
+    /* cor de destaque */
+    --cor-destaque: #9FD86B;
+
+
+    /* Fontes */
+    --fonte-principal: "Open Sans", sans-serif;
+    --fonte-titulo: "Montserrat", sans-serif;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--cor-texto);
+    line-height: 1.5;
+    background-color: var(--cor-fundo-claro);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fonte-principal), serif;
+}
+
+main {
+    flex: 1;
+    margin-bottom: 4rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

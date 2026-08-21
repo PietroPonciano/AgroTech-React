@@ -1,0 +1,93 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--cor-fundo-claro);
+}
+
+.navbar-container {
+    padding: 1.25rem 5vw;
+    border-bottom: 2px solid var(--cor-borda-cinza);
+    gap: 1rem;
+}
+
+.nav-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    flex-shrink: 0;
+    font-family: var(--fonte-titulo), serif;
+    font-size: clamp(1.35rem, 4vw, 1.75rem);
+    font-weight: 800;
+    line-height: 1;
+    margin-right: 5vw;
+}
+
+.nav-logo-icon {
+    width: clamp(2rem, 6vw, 2.5rem);
+    aspect-ratio: 1;
+    display: block;
+    flex-shrink: 0;
+}
+
+.nav-logo-text {
+    display: inline-flex;
+    align-items: baseline;
+    white-space: nowrap;
+}
+
+.nav-logo-agro {
+    color: var(--cor-primaria);
+}
+
+.nav-logo-tech {
+    color: var(--cor-secundaria);
+}
+
+.page {
+    padding: 0.625rem 1.25rem;
+    border: 1px solid var(--cor-borda-cinza);
+    border-radius: 1.875rem;
+    display: inline-block;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.page-active {
+    background-color: var(--cor-botao);
+    font-weight: 700;
+}
+
+.page:not(.page-active):hover {
+    background-color: var(--cor-hover-azul);
+    transform: scale(1.1);
+}
+
+.navbar .navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 2px;
+}
+
+.navbar-toggler:hover {
+    background-color: var(--cor-hover-azul);
+}
+
+.navbar-toggler .bi {
+    font-size: 2rem;
+    color: var(--cor-texto);
+}
+
+@media (max-width: 575.98px) {
+    .navbar-container {
+        padding-block: 1rem;
+    }
+
+    .nav-logo {
+        margin-right: 1rem;
+    }
+}
