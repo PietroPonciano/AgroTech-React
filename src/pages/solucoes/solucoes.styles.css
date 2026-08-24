@@ -1,0 +1,517 @@
+/* ==============================
+   PÁGINA: SOLUÇÕES
+================================= */
+
+
+/* ==============================
+   ESTRUTURA GERAL
+================================= */
+
+.solucoes__container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 3rem 5vw;
+}
+
+
+/* ==============================
+   INTRODUÇÃO
+================================= */
+
+.solucoes__intro {
+    text-align: center;
+}
+
+.solucoes__intro__title {
+    margin-bottom: 1rem;
+    font-family: var(--fonte-titulo);
+    font-size: clamp(2rem, 6vw, 3.25rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--cor-secundaria);
+}
+
+.solucoes__intro__description {
+    font-family: var(--fonte-principal);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--cor-texto);
+}
+
+
+/* ==============================
+   CARDS DE SOLUÇÕES
+================================= */
+
+.solucoes__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.solucoes__card {
+    position: relative;
+    padding: 0.875rem;
+    border: 2px solid var(--cor-borda-suave);
+    border-radius: 1.5rem;
+    background-color: var(--texto-branco-puro);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.solucoes__card:hover {
+    transform: translateY(-8px);
+    border-color: var(--cor-primaria);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Imagem */
+
+.solucoes__card-image {
+    width: 100%;
+    height: 12.5rem;
+    display: block;
+
+    margin-bottom: 1.125rem;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 1rem;
+
+    transition: transform 0.3s ease;
+}
+
+.solucoes__card:hover .solucoes__card-image {
+    transform: scale(1.03);
+}
+
+
+/* Conteúdo */
+
+.solucoes__card__content {
+    display: grid;
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+
+    gap: 0.75rem 0.875rem;
+    align-items: center;
+}
+
+
+/* Ícone */
+
+.solucoes__card-icon {
+    width: 3.25rem;
+    height: 3.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+
+    font-size: 1.375rem;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.solucoes__card:hover .solucoes__card-icon {
+    transform: translateY(-3px) scale(1.06);
+
+    background-color: var(--cor-secundaria);
+    color: var(--texto-branco-puro);
+}
+
+
+/* Título */
+
+.solucoes__card-title {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+
+    color: var(--cor-texto);
+}
+
+
+/* Descrição */
+
+.solucoes__card-description {
+    grid-column: 1 / -1;
+
+    font-family: var(--fonte-principal);
+    font-size: 0.95rem;
+
+    color: var(--cor-texto);
+}
+
+.solucoes__card-highlight {
+    display: block;
+
+    margin-bottom: 0.35rem;
+
+    font-family: var(--fonte-titulo);
+    font-weight: 800;
+
+    color: var(--cor-secundaria);
+}
+
+.solucoes__card:hover .solucoes__card-highlight {
+    color: var(--cor-primaria);
+}
+
+
+/* ==============================
+   RECOMENDAÇÕES DO CONSULTOR
+================================= */
+
+.solucoes__selo {
+    display: inline-flex;
+    width: fit-content;
+
+    margin-bottom: 0.85rem;
+    padding: 0.35rem 0.65rem;
+
+    border-radius: 999px;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+
+/* Recomendação principal */
+
+.solucoes__card.solucao-recomendada {
+    border-color: var(--cor-primaria);
+    background-color: var(--cor-hover-azul);
+
+    animation: destaqueSolucao 0.65s ease;
+}
+
+.solucoes__card.solucao-recomendada .solucoes__selo {
+    background-color: var(--cor-primaria);
+    color: var(--texto-branco-puro);
+}
+
+
+/* Recomendações secundárias */
+
+.solucoes__card.solucao-secundaria {
+    border-color: var(--cor-botao);
+}
+
+.solucoes__card.solucao-secundaria .solucoes__selo {
+    background-color: var(--cor-hover);
+    color: var(--cor-secundaria);
+}
+
+
+@keyframes destaqueSolucao {
+    from {
+        transform: translateY(8px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+/* ==============================
+   CALCULADORA DE PRODUÇÃO
+================================= */
+
+.simulador-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 1.25rem;
+
+    margin-top: 2rem;
+    padding: 1.25rem;
+
+    border: 2px solid var(--cor-borda-suave);
+    border-radius: 8px;
+
+    background-color: #eef8f3;
+}
+
+
+.simulador-texto,
+.simulador-card,
+.simulador-campos,
+.simulador-resultado,
+.simulador-resultado > div {
+    min-width: 0;
+}
+
+
+/* Texto */
+
+.simulador-texto {
+    flex: 1 1 16rem;
+}
+
+.simulador-label {
+    display: inline-flex;
+
+    margin-bottom: 0.5rem;
+
+    font-family: var(--fonte-titulo);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    color: var(--cor-primaria);
+}
+
+.simulador-texto h2 {
+    margin-bottom: 0.75rem;
+
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.15;
+
+    color: var(--cor-secundaria);
+}
+
+.simulador-texto p {
+    margin-bottom: 0;
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+
+    color: var(--cor-texto);
+}
+
+.simulador-texto .simulador-fonte {
+    margin-top: 0.75rem;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    color: var(--cor-secundaria);
+}
+
+
+/* Formulário */
+
+.simulador-card {
+    flex: 1 1 30rem;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+    padding: 1rem;
+
+    border-radius: 8px;
+
+    background-color: var(--texto-branco-puro);
+}
+
+.simulador-campos {
+    flex: 1 1 13rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.simulador-campo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.4rem;
+}
+
+.simulador-campo label {
+    margin-bottom: 0;
+
+    font-size: 0.82rem;
+    font-weight: 800;
+
+    color: var(--cor-secundaria);
+}
+
+.simulador-campo input,
+.simulador-campo select {
+    width: 100%;
+    min-height: 2.9rem;
+
+    padding: 0.65rem 0.75rem;
+
+    border: 1px solid var(--cor-borda-cinza);
+    border-radius: 8px;
+
+    background-color: #fbfdfc;
+    color: var(--cor-texto);
+
+    font: inherit;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.simulador-campo input:focus,
+.simulador-campo select:focus {
+    border-color: var(--cor-primaria);
+
+    outline: none;
+
+    box-shadow: 0 0 0 0.2rem rgba(5, 155, 154, 0.12);
+}
+
+
+/* Resultado */
+
+.simulador-resultado {
+    flex: 1 1 15rem;
+
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    min-height: 8.2rem;
+
+    padding: 1rem;
+
+    border-radius: 8px;
+
+    background-color: var(--cor-primaria);
+    color: var(--texto-branco-puro);
+}
+
+.simulador-resultado .bi {
+    font-size: 2.35rem;
+}
+
+.simulador-resultado span {
+    display: block;
+
+    margin-bottom: 0.25rem;
+
+    color: var(--texto-branco-medio);
+
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.simulador-resultado output {
+    display: block;
+
+    font-family: var(--fonte-titulo);
+    font-size: 1.85rem;
+    font-weight: 800;
+    line-height: 1.1;
+
+    overflow-wrap: anywhere;
+}
+
+.simulador-resultado p {
+    margin: 0.35rem 0 0;
+
+    color: var(--texto-branco-medio);
+
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+================================= */
+
+@media (min-width: 768px) {
+
+    .solucoes__container {
+        padding: 3.5rem 5vw 4.5rem;
+    }
+
+    .solucoes__intro {
+        margin-bottom: 2.25rem;
+    }
+
+    .solucoes__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+    }
+
+    .solucoes__card {
+        min-height: 320px;
+        padding: 1.25rem;
+    }
+
+    .solucoes__card-image {
+        height: 14.375rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .solucoes__card__content {
+        grid-template-columns: 3.5rem minmax(0, 1fr);
+        gap: 0.875rem 1.375rem;
+    }
+
+    .solucoes__card-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+
+        font-size: 1.5rem;
+    }
+
+    .solucoes__card-description {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 991px) {
+
+    .simulador-card {
+        flex-basis: 100%;
+    }
+}
+
+
+@media (max-width: 575px) {
+
+    .simulador-section,
+    .simulador-card,
+    .simulador-resultado {
+        padding: 1rem;
+    }
+
+    .simulador-texto h2 {
+        font-size: 1.65rem;
+    }
+
+    .simulador-resultado {
+        align-items: flex-start;
+    }
+
+    .simulador-resultado output {
+        font-size: 1.55rem;
+    }
+
+    .simulador-resultado .bi {
+        font-size: 2rem;
+    }
+}
