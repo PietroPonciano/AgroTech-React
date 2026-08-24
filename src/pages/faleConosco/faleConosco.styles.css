@@ -1,0 +1,502 @@
+/* =========================================
+   FALE CONOSCO
+========================================= */
+
+.fale-conosco-page {
+  min-height: 100vh;
+
+  background: var(--cor-fundo-claro);
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto);
+
+  padding: 40px 20px;
+}
+
+
+/* =========================================
+   CONTAINERS
+========================================= */
+
+.fale-conosco,
+.faq-contato {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 40px auto;
+  padding: 40px;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid var(--cor-borda-cinza);
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.08);
+
+  animation: fadeUp 0.8s ease;
+}
+
+
+/* =========================================
+   TÍTULOS
+========================================= */
+
+.fale-conosco h2,
+.faq-contato h2 {
+  font-family: var(--fonte-titulo);
+
+  text-align: center;
+
+  margin: 0 0 30px;
+
+  color: var(--cor-secundaria);
+
+  position: relative;
+}
+
+.fale-conosco h2::after,
+.faq-contato h2::after {
+  content: "";
+
+  display: block;
+
+  width: 80px;
+  height: 3px;
+
+  margin: 10px auto 0;
+
+  background: var(--cor-primaria);
+
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   FAQ
+========================================= */
+
+.perguntas-faq-contato {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.perguntas-faq-contato details {
+  background: white;
+
+  border: 1px solid var(--cor-borda-cinza);
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  transition: all 0.25s ease;
+}
+
+.perguntas-faq-contato details:hover {
+  border-color: var(--cor-primaria);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(5, 155, 154, 0.15);
+}
+
+.perguntas-faq-contato details[open] {
+  border-color: var(--cor-primaria);
+}
+
+.perguntas-faq-contato summary {
+  list-style: none;
+
+  padding: 18px 50px 18px 20px;
+
+  cursor: pointer;
+
+  font-family: var(--fonte-titulo);
+
+  color: var(--cor-texto);
+
+  position: relative;
+
+  transition: all 0.25s ease;
+}
+
+.perguntas-faq-contato summary::-webkit-details-marker {
+  display: none;
+}
+
+.perguntas-faq-contato summary {
+  list-style: none;
+
+  padding: 18px 20px;
+
+  cursor: pointer;
+
+  font-family: var(--fonte-titulo);
+  color: var(--cor-texto);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  transition: all 0.25s ease;
+}
+
+.perguntas-faq-contato summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+
+  color: var(--cor-primaria);
+
+  transition: transform 0.3s ease;
+}
+
+/* Gira o Chevron quando a pergunta está aberta */
+.perguntas-faq-contato details[open] .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.perguntas-faq-contato p {
+  padding: 0 20px 20px;
+
+  margin: 0;
+
+  color: var(--cor-texto);
+
+  line-height: 1.6;
+
+  animation: fadeDown 0.3s ease;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.container-form {
+  display: flex;
+
+  gap: 40px;
+
+  align-items: center;
+}
+
+.fale-conosco form {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.campo-form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.fale-conosco label {
+  font-family: var(--fonte-titulo);
+
+  font-size: 14px;
+
+  margin-bottom: 6px;
+
+  color: var(--cor-texto);
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.fale-conosco input,
+.fale-conosco textarea {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border: 1px solid var(--cor-borda-cinza);
+
+  border-radius: 12px;
+
+  background: white;
+
+  font-family: var(--fonte-principal);
+
+  font-size: 15px;
+
+  color: var(--cor-texto);
+
+  transition: all 0.25s ease;
+
+  box-sizing: border-box;
+}
+
+.fale-conosco textarea {
+  resize: vertical;
+
+  min-height: 120px;
+}
+
+.fale-conosco input:focus,
+.fale-conosco textarea:focus {
+  outline: none;
+
+  border-color: var(--cor-primaria);
+
+  box-shadow:
+    0 0 0 4px var(--cor-hover-azul);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   ERROS
+========================================= */
+
+.fale-conosco input.is-invalid,
+.fale-conosco textarea.is-invalid {
+  border-color: #ff6b6b;
+}
+
+.invalid-feedback {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #ff6b6b;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   CONTADOR
+========================================= */
+
+#contadorMensagem {
+  display: block;
+
+  margin-top: 6px;
+
+  color: var(--cor-texto);
+
+  font-size: 12px;
+
+  opacity: 0.7;
+}
+
+
+/* =========================================
+   BOTÃO
+========================================= */
+
+.fale-conosco button {
+  width: 140px;
+
+  padding: 12px 18px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: var(--cor-primaria);
+
+  color: var(--texto-branco-puro);
+
+  font-family: var(--fonte-principal);
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.fale-conosco button:hover {
+  background: var(--cor-secundaria);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(5, 155, 154, 0.25);
+}
+
+.fale-conosco button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   MENSAGEM DE SUCESSO
+========================================= */
+
+.mensagem-sucesso {
+  opacity: 0;
+
+  transform: translateY(-10px);
+
+  max-height: 0;
+
+  overflow: hidden;
+
+  padding: 0 14px;
+
+  border-left: 4px solid var(--cor-primaria);
+
+  border-radius: 12px;
+
+  background: var(--cor-hover);
+
+  color: var(--cor-secundaria);
+
+  font-weight: 600;
+
+  transition: all 0.4s ease;
+}
+
+.mensagem-sucesso.mostrar {
+  opacity: 1;
+
+  transform: translateY(0);
+
+  max-height: 120px;
+
+  padding: 14px;
+}
+
+
+/* =========================================
+   IMAGEM
+========================================= */
+
+.imagem-form {
+  flex: 1;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem-form img {
+  width: 100%;
+
+  max-width: 260px;
+
+  height: auto;
+
+  animation: float 3s ease-in-out infinite;
+}
+
+
+/* =========================================
+   ANIMAÇÕES
+========================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 768px) {
+  .fale-conosco-page {
+    padding: 20px 12px;
+  }
+
+  .fale-conosco,
+  .faq-contato {
+    margin: 20px auto;
+
+    padding: 30px 20px;
+
+    border-radius: 16px;
+  }
+
+  .fale-conosco h2,
+  .faq-contato h2 {
+    margin-bottom: 20px;
+  }
+
+  .container-form {
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+  .imagem-form {
+    order: -1;
+
+    width: 100%;
+  }
+
+  .imagem-form img {
+    max-width: min(150px, 55vw);
+  }
+
+  .fale-conosco button {
+    width: 100%;
+  }
+
+  .perguntas-faq-contato summary {
+    font-size: 0.95rem;
+  }
+}
