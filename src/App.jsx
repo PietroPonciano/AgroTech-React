@@ -7,7 +7,7 @@ import MainLayout from "./components/layouts/MainLayout";
 import Home from "./pages/home/home";
 import Solucoes from "./pages/solucoes/solucoes";
 import QuemSomos from "./pages/quemSomos/quemSomos";
-import FaleConosco from "./pages/faleConosco/faleConosco";
+import FaleConosco from "./pages/FaleConosco/FaleConosco";
 
 
 export default function App() {
