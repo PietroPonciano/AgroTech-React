@@ -4,9 +4,9 @@ import { Routes, Route } from "react-router";
 import MainLayout from "./components/layouts/MainLayout";
 
 // paginas
-import Home from "./pages/home/home";
-import Solucoes from "./pages/solucoes/solucoes";
-import QuemSomos from "./pages/quemSomos/quemSomos";
+import Home from "./pages/Home/Home";
+import Solucoes from "./pages/Solucoes/Solucoes";
+import QuemSomos from "./pages/QuemSomos/QuemSomos";
 import FaleConosco from "./pages/FaleConosco/FaleConosco";
 
 
