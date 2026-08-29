@@ -49,6 +49,12 @@ export default function Navbar(){
                                 </li>
 
                                 <li>
+                                    <NavLink to="/dicas" className={definirPaginaAtiva}>
+                                        Dicas
+                                    </NavLink>
+                                </li>
+
+                                <li>
                                     <NavLink to="/fale-conosco" className={definirPaginaAtiva}>
                                         Fale Conosco
                                     </NavLink>
