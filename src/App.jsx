@@ -7,6 +7,7 @@ import MainLayout from "./components/layouts/MainLayout";
 import Home from "./pages/Home/Home";
 import Solucoes from "./pages/Solucoes/Solucoes";
 import QuemSomos from "./pages/QuemSomos/QuemSomos";
+import DicasAgricolas from "./pages/dicasAgricolas/DicasAgricolas.jsx";
 import FaleConosco from "./pages/FaleConosco/FaleConosco";
 
 
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/solucoes" element={<Solucoes />} />
         <Route path="/quem-somos" element={<QuemSomos />} />
+        <Route path="/dicas" element={<DicasAgricolas />} />
         <Route path="/fale-conosco" element={<FaleConosco />} />
       </Route>
     </Routes>
