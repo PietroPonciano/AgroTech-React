@@ -49,7 +49,6 @@ export default function Footer(){
                     <div className="col-12 col-lg footer-equipe text-center">
                         <p className="footer-titulo mb-3">EQUIPE 1ESOB — FIAP 2026</p>
                         <ul className="list-unstyled footer-texto-fraco">
-                            <li className="mb-1">Estevão Nunes Gabriel — RM571413</li>
                             <li className="mb-1">Guilherme Silva Costa — RM573826</li>
                             <li className="mb-1">Matheus Leite Carneiro — RM568733</li>
                             <li className="mb-1">Pedro Corvino Gamba — RM573756</li>
