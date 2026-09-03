@@ -7,7 +7,7 @@ import {
   LIMITE_MENSAGEM,
   validarCampo,
   validarFormulario,
-} from "../../utils/validacaoContato";
+} from "../../Utils/validacaoContato";
 
 export default function FormularioContato() {
   const [formData, setFormData] = useState({
