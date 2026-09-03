@@ -15,7 +15,11 @@
     "lucide-react": "^1.31.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+<<<<<<< HEAD
     "react-router": "^8.3.0"
+=======
+    "react-router-dom": "^7.18.3"
+>>>>>>> main
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

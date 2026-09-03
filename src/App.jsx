@@ -1,14 +1,16 @@
-import { Routes, Route } from "react-router";
+
+import { Routes, Route } from "react-router-dom";
+
 
 // layout das paginas
 import MainLayout from "./components/layouts/MainLayout";
 
 // paginas
-import Home from "./pages/Home/Home";
-import Solucoes from "./pages/Solucoes/Solucoes";
-import QuemSomos from "./pages/QuemSomos/QuemSomos";
+import Home from "./pages/home/home";
+import Solucoes from "./pages/solucoes/solucoes";
+import QuemSomos from "./pages/quemSomos/quemSomos";
 import DicasAgricolas from "./pages/dicasAgricolas/DicasAgricolas.jsx";
-import FaleConosco from "./pages/FaleConosco/FaleConosco";
+import FaleConosco from "./pages/faleConosco/faleConosco";
 
 
 export default function App() {
