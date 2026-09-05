@@ -36,12 +36,12 @@ export default function Footer(){
                     <div className="col-12 col-lg footer-pitch text-center">
                         <p className="footer-pitch-titulo footer-titulo mb-3">PITCH VÍDEO</p>
 
-                        <a href="https://www.youtube.com/watch?v=eFqLEcY02dg" target="_blank" rel="noopener noreferrer"
+                        <a href="https://youtu.be/Ft9zjnj45EI?si=ELfpYZg7bR4AxoWw" target="_blank" rel="noopener noreferrer"
                            className="footer-pitch-link d-flex align-items-center text-decoration-none justify-content-center">
                             <i className="bi bi-play-circle-fill"></i>
                             <div className="d-flex flex-column text-start">
                                 <p className="footer-texto-medio mb-1 fw-bold">Assista ao nosso pitch</p>
-                                <p className="footer-texto-fraco mb-0">Conheça as novas funcionalidades do site</p>
+                                <p className="footer-texto-fraco mb-0">Conheça as novidades do site</p>
                             </div>
                         </a>
                     </div>
