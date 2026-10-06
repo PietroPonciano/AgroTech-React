@@ -1,5 +1,4 @@
-import { useState } from "react"
-import { useLocation } from "react-router"
+import { Link, useLocation } from "react-router"
 
 import {
     ChartNoAxesCombined,
@@ -16,43 +15,6 @@ import SolucaoCard3 from "../../assets/imgs/solucao-card-3.png"
 import SolucaoCard4 from "../../assets/imgs/solucao-card-4.png"
 
 import "./solucoes.styles.css"
-
-
-// ==============================
-// DADOS DA CALCULADORA
-// ==============================
-
-const culturas = {
-    milho: {
-        nome: "Milho",
-        produtividade: 5426,
-        fonte: "IBGE/PAM 2024"
-    },
-
-    feijao: {
-        nome: "Feijão",
-        produtividade: 1147,
-        fonte: "IBGE/PAM 2024"
-    },
-
-    tomate: {
-        nome: "Tomate",
-        produtividade: 72760,
-        fonte: "IBGE/PAM 2024"
-    },
-
-    alface: {
-        nome: "Alface",
-        produtividade: 18600,
-        fonte: "Embrapa"
-    },
-
-    mandioca: {
-        nome: "Mandioca",
-        produtividade: 15465,
-        fonte: "IBGE/PAM 2024"
-    }
-}
 
 
 // ==============================
@@ -74,22 +36,6 @@ function carregarResultadoConsultor() {
 }
 
 
-function formatarNumero(valor) {
-    return new Intl.NumberFormat("pt-BR", {
-        maximumFractionDigits: 1
-    }).format(valor)
-}
-
-
-function formatarPeso(valor) {
-    if (valor >= 1000) {
-        return `${formatarNumero(valor / 1000)} t`
-    }
-
-    return `${formatarNumero(valor)} kg`
-}
-
-
 // ==============================
 // COMPONENTE
 // ==============================
@@ -98,21 +44,10 @@ export default function Solucoes() {
 
     const location = useLocation()
 
-    // Estados da calculadora
-    const [cultura, setCultura] = useState("milho")
-    const [area, setArea] = useState(2)
-
     // Recupera o diagnóstico realizado pelo Consultor AgroTech
     const resultadoConsultor =
         location.state?.resultadoConsultor ??
         carregarResultadoConsultor()
-
-    // Cultura atualmente selecionada no formulário
-    const culturaSelecionada = culturas[cultura]
-
-    // Produção = área plantada × produtividade média da cultura
-    const producao =
-        Number(area) * culturaSelecionada.produtividade
 
 
     return (
@@ -183,115 +118,27 @@ export default function Solucoes() {
             </section>
 
 
-            {/* ==============================
-                CALCULADORA DE PRODUÇÃO
-            ================================= */}
-
-            <section
-                className="simulador-section"
-                aria-labelledby="simulador-title"
-            >
-
-                <div className="simulador-texto">
-                    <span className="simulador-label">
-                        Estimativa rápida
+            <section className="solucoes__cta">
+                <div>
+                    <span className="solucoes__cta-label">
+                        Gestão da Produção
                     </span>
 
-                    <h2 id="simulador-title">
-                        Calculadora de Produção
+                    <h2>
+                        Organize e acompanhe sua produção
                     </h2>
 
                     <p>
-                        Informe o tamanho do plantio e tenha uma simulação rápida de
-                        quanto pode ser colhido.
-                    </p>
-
-                    <p className="simulador-fonte">
-                        Estimativa com médias reais: IBGE/PAM 2024 e Embrapa.
+                        Use o Minha Safra para planejar suas produções,
+                        acompanhar sua rotina no campo e aproveitar ferramentas
+                        simples de planejamento.
                     </p>
                 </div>
 
-
-                <form
-                    className="simulador-card"
-                    onSubmit={(evento) => evento.preventDefault()}
-                >
-
-                    <div className="simulador-campos">
-
-                        {/* Cultura */}
-                        <div className="simulador-campo">
-                            <label htmlFor="simulador-cultura">
-                                Cultura
-                            </label>
-
-                            <select
-                                id="simulador-cultura"
-                                value={cultura}
-                                onChange={(evento) =>
-                                    setCultura(evento.target.value)
-                                }
-                            >
-                                <option value="milho">Milho</option>
-                                <option value="feijao">Feijão</option>
-                                <option value="tomate">Tomate</option>
-                                <option value="alface">Alface</option>
-                                <option value="mandioca">Mandioca</option>
-                            </select>
-                        </div>
-
-
-                        {/* Área plantada */}
-                        <div className="simulador-campo">
-                            <label htmlFor="simulador-area">
-                                Área plantada (ha)
-                            </label>
-
-                            <input
-                                id="simulador-area"
-                                type="number"
-                                min="0.1"
-                                step="0.1"
-                                value={area}
-                                onChange={(evento) =>
-                                    setArea(evento.target.value)
-                                }
-                                inputMode="decimal"
-                            />
-                        </div>
-
-                    </div>
-
-
-                    {/* Resultado */}
-                    <div
-                        className="simulador-resultado"
-                        aria-live="polite"
-                    >
-                        <i
-                            className="bi bi-basket2-fill"
-                            aria-hidden="true"
-                        ></i>
-
-                        <div>
-                            <span>
-                                Produção estimada
-                            </span>
-
-                            <output>
-                                {formatarPeso(producao)}
-                            </output>
-
-                            <p>
-                                {culturaSelecionada.nome}:{" "}
-                                {formatarNumero(culturaSelecionada.produtividade)} kg/ha.
-                                Fonte: {culturaSelecionada.fonte}.
-                            </p>
-                        </div>
-                    </div>
-
-                </form>
-
+                <Link to="/minha-safra" className="solucoes__cta-link">
+                    <span>Acessar Minha Safra</span>
+                    <i className="bi bi-arrow-right" aria-hidden="true"></i>
+                </Link>
             </section>
 
         </main>

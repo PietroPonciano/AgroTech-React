@@ -282,11 +282,7 @@ export default function Consultor() {
 
     return (
         <section
-            className={`consultor ${
-                aberto
-                    ? "consultor--aberto"
-                    : "consultor--chamada-visivel"
-            }`}
+            className={`consultor ${aberto ? "consultor--aberto" : ""}`}
             aria-label="Consultor AgroTech"
         >
 
@@ -305,27 +301,7 @@ export default function Consultor() {
                     className="bi bi-chat-dots-fill"
                     aria-hidden="true"
                 ></i>
-
-                <span
-                    className="consultor__notificacao"
-                    aria-hidden="true"
-                ></span>
             </button>
-
-
-            {/* ==============================
-                BALÃO DE CHAMADA
-            ================================= */}
-
-            {!aberto && (
-                <button
-                    className="consultor__chamada"
-                    type="button"
-                    onClick={() => setAberto(true)}
-                >
-                    Descubra sua solução ideal
-                </button>
-            )}
 
 
             {/* ==============================

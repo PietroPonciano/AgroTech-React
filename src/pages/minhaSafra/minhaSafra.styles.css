@@ -1,0 +1,756 @@
+/* ==============================
+   PÁGINA: MINHA SAFRA
+================================= */
+
+.minha-safra__container {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 3rem 5vw;
+}
+
+
+/* ==============================
+   INTRODUÇÃO
+================================= */
+
+.minha-safra__intro {
+    min-width: 0;
+    max-width: 760px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.minha-safra__intro h1 {
+    margin-bottom: 1rem;
+
+    font-family: var(--fonte-titulo), serif;
+    font-size: clamp(2rem, 6vw, 3.25rem);
+    font-weight: 800;
+    line-height: 1.1;
+
+    color: var(--cor-secundaria);
+}
+
+.minha-safra__intro p {
+    margin-bottom: 0;
+
+    font-size: clamp(1rem, 2vw, 1.18rem);
+    line-height: 1.7;
+
+    color: var(--cor-texto);
+}
+
+
+/* ==============================
+   MINHAS SAFRAS
+================================= */
+
+.minha-safra__painel {
+    min-width: 0;
+    padding: 1.25rem;
+
+    border: 2px solid var(--cor-borda-suave);
+    border-radius: 1.5rem;
+
+    background-color: var(--texto-branco-puro);
+}
+
+.minha-safra__painel-topo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+    min-width: 0;
+}
+
+.minha-safra__painel-topo > div {
+    min-width: 0;
+}
+
+.minha-safra__label {
+    display: inline-flex;
+
+    margin-bottom: 0.4rem;
+
+    font-family: var(--fonte-titulo), serif;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    color: var(--cor-primaria);
+}
+
+.minha-safra__painel h2 {
+    margin-bottom: 0;
+
+    font-family: var(--fonte-titulo), serif;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.15;
+
+    color: var(--cor-secundaria);
+}
+
+.minha-safra__botao {
+    max-width: 100%;
+    padding: 0.75rem 1.25rem;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--cor-primaria);
+    color: var(--texto-branco-puro);
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.minha-safra__botao:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-2px);
+}
+
+.minha-safra__botao--secundario {
+    border: 1px solid var(--cor-primaria);
+
+    background-color: var(--texto-branco-puro);
+    color: var(--cor-secundaria);
+}
+
+.minha-safra__botao--secundario:hover {
+    background-color: var(--cor-hover-azul);
+}
+
+.minha-safra__vazio {
+    min-width: 0;
+    padding: 2rem 1rem;
+
+    border: 1px dashed var(--cor-primaria);
+    border-radius: 8px;
+
+    background-color: var(--cor-hover-azul);
+
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.minha-safra__vazio .bi {
+    display: inline-flex;
+
+    margin-bottom: 0.8rem;
+
+    color: var(--cor-primaria);
+
+    font-size: 2.4rem;
+}
+
+.minha-safra__vazio h3 {
+    margin-bottom: 0.5rem;
+
+    font-family: var(--fonte-titulo), serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+
+    color: var(--cor-secundaria);
+}
+
+.minha-safra__vazio p {
+    max-width: 620px;
+    margin: 0 auto;
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+
+    color: var(--cor-texto);
+}
+
+
+/* ==============================
+   FORMULÁRIO DE CADASTRO
+================================= */
+
+.minha-safra__formulario {
+    min-width: 0;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 8px;
+
+    background-color: var(--cor-hover-azul);
+    overflow-wrap: break-word;
+}
+
+.minha-safra__formulario-topo {
+    margin-bottom: 1rem;
+}
+
+.minha-safra__formulario h3,
+.minha-safra__card h3 {
+    margin-bottom: 0;
+
+    font-family: var(--fonte-titulo), serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.2;
+
+    color: var(--cor-secundaria);
+}
+
+.minha-safra__campos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 1rem;
+}
+
+.minha-safra__campo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.4rem;
+    min-width: 0;
+}
+
+.minha-safra__campo label {
+    margin-bottom: 0;
+
+    font-size: 0.82rem;
+    font-weight: 800;
+
+    color: var(--cor-secundaria);
+}
+
+.minha-safra__campo input,
+.minha-safra__campo select {
+    width: 100%;
+    max-width: 100%;
+    min-height: 2.9rem;
+
+    padding: 0.65rem 0.75rem;
+
+    border: 1px solid var(--cor-borda-cinza);
+    border-radius: 8px;
+
+    background-color: var(--texto-branco-puro);
+    color: var(--cor-texto);
+
+    font: inherit;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.minha-safra__campo input:focus,
+.minha-safra__campo select:focus {
+    border-color: var(--cor-primaria);
+
+    outline: none;
+
+    box-shadow: 0 0 0 0.2rem rgba(5, 155, 154, 0.12);
+}
+
+.minha-safra__erro {
+    margin: 0.85rem 0 0;
+
+    color: var(--cor-secundaria);
+
+    font-size: 0.95rem;
+    font-weight: 800;
+    line-height: 1.6;
+}
+
+.minha-safra__formulario-acoes {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.75rem;
+
+    margin-top: 1rem;
+}
+
+
+/* ==============================
+   LISTA DE SAFRAS
+================================= */
+
+.minha-safra__lista {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1rem;
+}
+
+.minha-safra__card {
+    min-width: 0;
+    padding: 1rem;
+
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 8px;
+
+    background-color: var(--texto-branco-puro);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.06);
+
+    overflow-wrap: break-word;
+}
+
+.minha-safra__card-topo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-bottom: 0.8rem;
+}
+
+.minha-safra__card-topo p,
+.minha-safra__plantio,
+.minha-safra__progresso p {
+    margin-bottom: 0;
+
+    color: var(--cor-texto);
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.minha-safra__status {
+    flex-shrink: 0;
+
+    padding: 0.35rem 0.65rem;
+
+    border-radius: 1.875rem;
+
+    background-color: var(--cor-hover-azul);
+    color: var(--cor-secundaria);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.minha-safra__estimativa {
+    margin-top: 1rem;
+    padding: 0.9rem;
+
+    border-radius: 8px;
+
+    background-color: var(--cor-primaria);
+    color: var(--texto-branco-puro);
+}
+
+.minha-safra__estimativa span,
+.minha-safra__progresso-topo span {
+    display: block;
+
+    margin-bottom: 0.25rem;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.minha-safra__estimativa span {
+    color: var(--texto-branco-medio);
+}
+
+.minha-safra__estimativa strong {
+    display: block;
+
+    font-family: var(--fonte-titulo), serif;
+    font-size: 1.55rem;
+    line-height: 1.1;
+}
+
+.minha-safra__progresso {
+    margin-top: 1rem;
+}
+
+.minha-safra__progresso-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-bottom: 0.4rem;
+
+    color: var(--cor-secundaria);
+}
+
+.minha-safra__barra {
+    height: 0.55rem;
+    margin-bottom: 0.45rem;
+
+    overflow: hidden;
+
+    border-radius: 1.875rem;
+
+    background-color: var(--cor-borda-suave);
+}
+
+.minha-safra__barra span {
+    display: block;
+
+    width: 0;
+    height: 100%;
+
+    background-color: var(--cor-primaria);
+}
+
+.minha-safra__ver {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.7rem 1rem;
+
+    border: 1px solid var(--cor-borda-cinza);
+    border-radius: 8px;
+
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-secundaria);
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.minha-safra__ver:hover {
+    border-color: var(--cor-primaria);
+
+    background-color: var(--cor-hover-azul);
+
+    transform: translateY(-2px);
+}
+
+.minha-safra__ver:disabled {
+    cursor: not-allowed;
+    opacity: 0.75;
+}
+
+
+/* ==============================
+   DETALHE DA SAFRA
+================================= */
+
+.minha-safra__detalhe {
+    min-width: 0;
+    padding: 1.25rem;
+
+    border: 2px solid var(--cor-borda-suave);
+    border-radius: 1.5rem;
+
+    background-color: var(--texto-branco-puro);
+}
+
+.minha-safra__voltar {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.5rem;
+
+    margin-bottom: 1.25rem;
+    padding: 0.65rem 0;
+
+    border: none;
+
+    background: transparent;
+    color: var(--cor-secundaria);
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.minha-safra__voltar:hover {
+    color: var(--cor-primaria);
+}
+
+.minha-safra__detalhe-topo,
+.minha-safra__atividades-topo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    min-width: 0;
+}
+
+.minha-safra__detalhe-topo {
+    margin-bottom: 1.25rem;
+}
+
+.minha-safra__detalhe-topo > div,
+.minha-safra__atividades-topo > div {
+    min-width: 0;
+}
+
+.minha-safra__detalhe h1 {
+    margin-bottom: 0.6rem;
+
+    font-family: var(--fonte-titulo), serif;
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 800;
+    line-height: 1.1;
+
+    color: var(--cor-secundaria);
+}
+
+.minha-safra__detalhe-topo p {
+    margin-bottom: 0;
+
+    color: var(--cor-texto);
+
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.minha-safra__resumo-detalhe {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+
+    gap: 1rem;
+
+    margin-bottom: 1.25rem;
+}
+
+.minha-safra__progresso--detalhe {
+    margin-top: 0;
+    padding: 1rem;
+
+    border-radius: 8px;
+
+    background-color: var(--cor-hover-azul);
+}
+
+.minha-safra__progresso--detalhe .minha-safra__barra {
+    background-color: var(--texto-branco-puro);
+}
+
+
+/* ==============================
+   ATIVIDADES
+================================= */
+
+.minha-safra__atividades {
+    min-width: 0;
+    padding-top: 1.25rem;
+
+    border-top: 1px solid var(--cor-borda-suave);
+}
+
+.minha-safra__atividades-topo {
+    margin-bottom: 1rem;
+}
+
+.minha-safra__atividades h2 {
+    margin-bottom: 0;
+
+    font-family: var(--fonte-titulo), serif;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.15;
+
+    color: var(--cor-secundaria);
+}
+
+.minha-safra__formulario--atividade {
+    margin-bottom: 1rem;
+}
+
+.minha-safra__campos--atividade {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
+}
+
+.minha-safra__vazio--atividade {
+    margin-top: 0;
+}
+
+.minha-safra__atividades-lista {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.75rem;
+}
+
+.minha-safra__atividade {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+
+    gap: 0.85rem;
+
+    min-width: 0;
+    padding: 0.9rem;
+
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 8px;
+
+    background-color: var(--texto-branco-puro);
+}
+
+.minha-safra__atividade--concluida {
+    background-color: var(--cor-hover-azul);
+}
+
+.minha-safra__atividade-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 0;
+
+    color: var(--cor-primaria);
+
+    font-size: 1.35rem;
+
+    cursor: pointer;
+}
+
+.minha-safra__atividade-check input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+
+    clip: rect(0 0 0 0);
+}
+
+.minha-safra__atividade-check input:focus-visible + span {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.minha-safra__atividade-info {
+    min-width: 0;
+}
+
+.minha-safra__atividade-info h3 {
+    margin-bottom: 0.2rem;
+
+    font-family: var(--fonte-titulo), serif;
+    font-size: 1.05rem;
+    font-weight: 800;
+    line-height: 1.3;
+
+    color: var(--cor-secundaria);
+}
+
+.minha-safra__atividade-info p {
+    margin-bottom: 0;
+
+    color: var(--cor-texto);
+
+    font-size: 0.9rem;
+}
+
+.minha-safra__atividade-status {
+    padding: 0.35rem 0.65rem;
+
+    border-radius: 1.875rem;
+
+    background-color: var(--cor-hover-azul);
+    color: var(--cor-secundaria);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.minha-safra__atividade--concluida .minha-safra__atividade-status {
+    background-color: var(--cor-primaria);
+    color: var(--texto-branco-puro);
+}
+
+
+/* ==============================
+   CALCULADORA
+================================= */
+
+.minha-safra__calculadora {
+    min-width: 0;
+    margin-top: 2rem;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+================================= */
+
+@media (min-width: 768px) {
+
+    .minha-safra__container {
+        padding: 3.5rem 5vw 4.5rem;
+    }
+
+    .minha-safra__painel {
+        padding: 1.5rem;
+    }
+
+    .minha-safra__detalhe {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .minha-safra__painel,
+    .minha-safra__detalhe,
+    .minha-safra__formulario,
+    .minha-safra__card,
+    .minha-safra__atividade,
+    .minha-safra__vazio {
+        padding: 1rem;
+    }
+
+    .minha-safra__painel h2 {
+        font-size: 1.65rem;
+    }
+
+    .minha-safra__botao {
+        width: 100%;
+    }
+
+    .minha-safra__atividade {
+        grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .minha-safra__atividade-status {
+        grid-column: 2;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .minha-safra__campos,
+    .minha-safra__campos--atividade,
+    .minha-safra__resumo-detalhe,
+    .minha-safra__lista {
+        grid-template-columns: 1fr;
+    }
+
+    .minha-safra__formulario-acoes {
+        flex-direction: column;
+    }
+}

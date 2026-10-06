@@ -9,6 +9,12 @@ export default function Navbar(){
             : "page text-nowrap";
     };
 
+    const definirPaginaDestaqueAtiva = ({ isActive }) => {
+        return isActive
+            ? "page page-feature page-active text-nowrap"
+            : "page page-feature text-nowrap";
+    };
+
     return(
             <header>
                 <nav className="navbar navbar-expand-lg">
@@ -57,6 +63,12 @@ export default function Navbar(){
                                 <li>
                                     <NavLink to="/fale-conosco" className={definirPaginaAtiva}>
                                         Fale Conosco
+                                    </NavLink>
+                                </li>
+
+                                <li>
+                                    <NavLink to="/minha-safra" className={definirPaginaDestaqueAtiva}>
+                                        Minha Safra
                                     </NavLink>
                                 </li>
                             </ul>

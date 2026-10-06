@@ -57,6 +57,18 @@ header {
     font-weight: 700;
 }
 
+.page-feature {
+    border-color: var(--cor-primaria);
+    background-color: var(--cor-hover-azul);
+    color: var(--cor-secundaria);
+    font-weight: 800;
+}
+
+.page-feature.page-active {
+    background-color: var(--cor-primaria);
+    color: var(--texto-branco-puro);
+}
+
 .page:not(.page-active):hover {
     background-color: var(--cor-hover-azul);
     transform: scale(1.1);
