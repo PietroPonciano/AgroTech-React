@@ -612,6 +612,7 @@
 }
 
 .minha-safra__atividade-check {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -636,7 +637,7 @@
     clip: rect(0 0 0 0);
 }
 
-.minha-safra__atividade-check input:focus-visible + span {
+.minha-safra__atividade-check input:focus-visible + .bi {
     outline: 2px solid var(--cor-primaria);
     outline-offset: 2px;
     border-radius: 4px;

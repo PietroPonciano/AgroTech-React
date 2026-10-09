@@ -195,7 +195,7 @@ function DetalheSafra({
     const atividades = safra.atividades ?? []
 
     return (
-        <main className="minha-safra__container">
+        <div className="minha-safra__container">
             <section className="minha-safra__detalhe">
                 <button
                     className="minha-safra__voltar"
@@ -386,9 +386,14 @@ function DetalheSafra({
                                             aria-label={`Concluir atividade: ${atividade.titulo}`}
                                         />
 
-                                        <span aria-hidden="true">
-                                            {atividade.concluida ? "☑" : "☐"}
-                                        </span>
+                                        <i
+                                            className={`bi ${
+                                                atividade.concluida
+                                                    ? "bi-check-square-fill"
+                                                    : "bi-square"
+                                            }`}
+                                            aria-hidden="true"
+                                        ></i>
                                     </label>
 
                                     <div className="minha-safra__atividade-info">
@@ -414,7 +419,7 @@ function DetalheSafra({
                     )}
                 </section>
             </section>
-        </main>
+        </div>
     )
 }
 
@@ -675,7 +680,7 @@ export default function MinhaSafra() {
 
 
     return (
-        <main className="minha-safra__container">
+        <div className="minha-safra__container">
 
             <section className="minha-safra__intro">
                 <h1>
@@ -827,9 +832,9 @@ export default function MinhaSafra() {
                         </h3>
 
                         <p>
-                            Em breve, suas safras aparecerão aqui com informações
-                            de cultura, área plantada, atividades e
-                            acompanhamento da produção.
+                            Cadastre sua primeira safra para acompanhar cultura,
+                            área plantada, atividades e a estimativa de
+                            produção.
                         </p>
                     </div>
                 ) : (
@@ -853,6 +858,6 @@ export default function MinhaSafra() {
                 />
             </section>
 
-        </main>
+        </div>
     )
 }

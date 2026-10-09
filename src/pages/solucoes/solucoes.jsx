@@ -51,7 +51,7 @@ export default function Solucoes() {
 
 
     return (
-        <main className="solucoes__container">
+        <div className="solucoes__container">
 
             {/* ==============================
                 INTRODUÇÃO
@@ -141,6 +141,6 @@ export default function Solucoes() {
                 </Link>
             </section>
 
-        </main>
+        </div>
     )
 }

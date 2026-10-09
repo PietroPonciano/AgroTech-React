@@ -5,7 +5,7 @@ import "./faleConosco.styles.css";
 
 export default function FaleConosco() {
   return (
-    <main className="fale-conosco-page">
+    <div className="fale-conosco-page">
       <FAQContato />
 
       <section className="fale-conosco">
@@ -17,6 +17,6 @@ export default function FaleConosco() {
           <ImagemContato />
         </div>
       </section>
-    </main>
+    </div>
   );
 }
