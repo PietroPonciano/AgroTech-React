@@ -1,7 +1,11 @@
+import { useRef } from "react"
 import { NavLink } from "react-router"
 import "./navbar.styles.css"
 
 export default function Navbar(){
+
+    const botaoMenuRef = useRef(null)
+    const menuRef = useRef(null)
 
     const definirPaginaAtiva = ({ isActive }) => {
         return isActive
@@ -9,15 +13,16 @@ export default function Navbar(){
             : "page text-nowrap";
     };
 
-    const definirPaginaDestaqueAtiva = ({ isActive }) => {
-        return isActive
-            ? "page page-feature page-active text-nowrap"
-            : "page page-feature text-nowrap";
+    // Fecha o menu mobile ao navegar, para ele não cobrir o conteúdo da nova página
+    const fecharMenu = () => {
+        if (menuRef.current?.classList.contains("show")) {
+            botaoMenuRef.current?.click();
+        }
     };
 
     return(
             <header>
-                <nav className="navbar navbar-expand-lg">
+                <nav className="navbar navbar-expand-xl">
 
                     <div className="container-fluid navbar-container">
 
@@ -27,48 +32,48 @@ export default function Navbar(){
                                 className="nav-logo-tech">Tech</span></span>
                         </div>
 
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        <button ref={botaoMenuRef} className="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#paginas" aria-controls="paginas" aria-expanded="false"
                                 aria-label="Abrir menu">
                             <i className="bi bi-list"></i>
                         </button>
 
-                        <div id="paginas" className="collapse navbar-collapse justify-content-end">
-                            <ul className="d-flex flex-column flex-lg-row gap-4 list-unstyled mb-0 align-items-center mt-5 mt-lg-0">
+                        <div ref={menuRef} id="paginas" className="collapse navbar-collapse justify-content-end">
+                            <ul className="d-flex flex-column flex-xl-row gap-3 gap-xxl-4 list-unstyled mb-0 align-items-center mt-4 mt-xl-0 pb-2 pb-xl-0">
 
                                 <li>
-                                    <NavLink to="/" end className={definirPaginaAtiva}>
+                                    <NavLink to="/" end className={definirPaginaAtiva} onClick={fecharMenu}>
                                         Home
                                     </NavLink>
                                 </li>
 
                                 <li>
-                                    <NavLink to="/solucoes" className={definirPaginaAtiva}>
+                                    <NavLink to="/solucoes" className={definirPaginaAtiva} onClick={fecharMenu}>
                                         Soluções
                                     </NavLink>
                                 </li>
 
                                 <li>
-                                    <NavLink to="/quem-somos" className={definirPaginaAtiva}>
+                                    <NavLink to="/minha-safra" className={definirPaginaAtiva} onClick={fecharMenu}>
+                                        Minha Safra
+                                    </NavLink>
+                                </li>
+
+                                <li>
+                                    <NavLink to="/quem-somos" className={definirPaginaAtiva} onClick={fecharMenu}>
                                         Quem Somos
                                     </NavLink>
                                 </li>
 
                                 <li>
-                                    <NavLink to="/dicas" className={definirPaginaAtiva}>
+                                    <NavLink to="/dicas" className={definirPaginaAtiva} onClick={fecharMenu}>
                                         Dicas
                                     </NavLink>
                                 </li>
 
                                 <li>
-                                    <NavLink to="/fale-conosco" className={definirPaginaAtiva}>
+                                    <NavLink to="/fale-conosco" className={definirPaginaAtiva} onClick={fecharMenu}>
                                         Fale Conosco
-                                    </NavLink>
-                                </li>
-
-                                <li>
-                                    <NavLink to="/minha-safra" className={definirPaginaDestaqueAtiva}>
-                                        Minha Safra
                                     </NavLink>
                                 </li>
                             </ul>

@@ -26,6 +26,7 @@ export default function Footer(){
                             <p className="footer-titulo">NAVEGAÇÃO</p>
                             <Link to="/" className="footer-navegacao-pagina footer-texto-fraco">Home</Link>
                             <Link to="/solucoes" className="footer-navegacao-pagina footer-texto-fraco">Soluções</Link>
+                            <Link to="/minha-safra" className="footer-navegacao-pagina footer-texto-fraco">Minha Safra</Link>
                             <Link to="/quem-somos" className="footer-navegacao-pagina footer-texto-fraco">Quem Somos</Link>
                             <Link to="/dicas" className="footer-navegacao-pagina footer-texto-fraco">Dicas</Link>
                             <Link to="/fale-conosco" className="footer-navegacao-pagina footer-texto-fraco">Fale
