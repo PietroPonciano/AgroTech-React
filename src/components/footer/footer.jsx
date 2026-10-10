@@ -37,7 +37,7 @@ export default function Footer(){
                     <div className="col-12 col-lg footer-pitch text-center">
                         <p className="footer-pitch-titulo footer-titulo mb-3">PITCH VÍDEO</p>
 
-                        <a href="https://youtu.be/Ft9zjnj45EI?si=ELfpYZg7bR4AxoWw" target="_blank" rel="noopener noreferrer"
+                        <a href="https://youtu.be/KV4qb1ZjpWI" target="_blank" rel="noopener noreferrer"
                            className="footer-pitch-link d-flex align-items-center text-decoration-none justify-content-center">
                             <i className="bi bi-play-circle-fill"></i>
                             <div className="d-flex flex-column text-start">
@@ -48,12 +48,13 @@ export default function Footer(){
                     </div>
 
                     <div className="col-12 col-lg footer-equipe text-center">
-                        <p className="footer-titulo mb-3">EQUIPE 1ESOB — FIAP 2026</p>
+                        <p className="footer-titulo mb-3">EQUIPE 1ESOA — FIAP 2026</p>
                         <ul className="list-unstyled footer-texto-fraco">
                             <li className="mb-1">Guilherme Silva Costa — RM573826</li>
                             <li className="mb-1">Matheus Leite Carneiro — RM568733</li>
                             <li className="mb-1">Pedro Corvino Gamba — RM573756</li>
                             <li className="mb-1">Pietro Gonçalves Ponciano — RM570521</li>
+                            <li className="mb-1">Vitor Almeida de Meira Santos — RM572250</li>
                         </ul>
                     </div>
 

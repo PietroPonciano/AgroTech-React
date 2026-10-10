@@ -21,7 +21,7 @@ export default function Home(){
                         </p>
                         {/* Esse botao so aparece com a tela grande */}
                         <a
-                            href="https://youtu.be/Ft9zjnj45EI?si=ELfpYZg7bR4AxoWw"
+                            href="https://youtu.be/KV4qb1ZjpWI"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hero-btn align-self-stretch justify-content-center d-none d-lg-flex"
@@ -45,7 +45,7 @@ export default function Home(){
                     {/* Esse botao so aparece quando a tela fica pequena */}
                     <div className="col-12 d-flex flex-column d-lg-none">
                         <a
-                            href="https://youtu.be/Ft9zjnj45EI?si=ELfpYZg7bR4AxoWw"
+                            href="https://youtu.be/KV4qb1ZjpWI"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hero-btn align-self-stretch justify-content-center"
