@@ -1,0 +1,164 @@
+@startuml AgroTech - Diagrama de Classes
+
+skinparam defaultFontName "Arial"
+skinparam defaultFontSize 13
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam roundCorner 14
+skinparam nodesep 90
+skinparam ranksep 110
+skinparam classAttributeIconSize 0
+
+skinparam title {
+    FontColor #095169
+    FontSize 22
+    FontStyle bold
+}
+
+skinparam ArrowFontColor #059B9A
+skinparam ArrowFontSize 12
+skinparam ArrowFontStyle italic
+
+skinparam class {
+    BackgroundColor #FFFFFF
+    BorderColor #059B9A
+    BorderThickness 1.5
+    ArrowColor #095169
+    ArrowThickness 1.3
+    FontColor #095169
+    FontStyle bold
+    AttributeFontColor #0C0636
+    HeaderBackgroundColor #DFF0EF
+    StereotypeFontColor #059B9A
+}
+
+skinparam packageStyle rectangle
+skinparam packageTitleAlignment center
+
+skinparam package {
+    BackgroundColor #FFFFFF
+    BorderColor #9FD86B
+    FontColor #095169
+    FontStyle bold
+}
+
+hide empty members
+hide circle
+
+title AgroTech — Diagrama de Classes
+
+
+package "Minha Safra" {
+
+    class Safra {
+        - id : String
+        - area : Number
+        - dataPlantio : Date
+        - status : String
+        --
+        + adicionarAtividade(titulo : String, dataPrevista : Date) : void
+        + calcularProgresso() : Number
+        + calcularProducaoEstimada() : Number
+    }
+
+    class Atividade {
+        - id : String
+        - titulo : String
+        - dataPrevista : Date
+        - concluida : Boolean
+        --
+        + alternarConclusao() : void
+    }
+
+    class Cultura {
+        - chave : String
+        - nome : String
+        - produtividade : Number
+        - fonte : String
+        --
+        + calcularProducao(area : Number) : Number
+    }
+
+    class CalculadoraProducao {
+        - area : Number
+        --
+        + planejarProducao() : void
+    }
+}
+
+
+
+
+package "Consultor AgroTech" {
+
+    class Consultor {
+        - perguntaAtual : Number
+        - pontuacao : Map<String, Number>
+        --
+        + iniciarDiagnostico() : void
+        + registrarResposta(opcao : Opcao) : void
+        + calcularResultado() : Solucao[]
+        + verSolucoesIndicadas() : void
+    }
+
+    class Pergunta {
+        - texto : String
+    }
+
+    class Opcao {
+        - texto : String
+        - pontos : Number
+    }
+
+    class Solucao {
+        - chave : String
+        - destaque : String
+    }
+}
+
+
+package "Conteúdo" {
+
+    abstract class ConteudoInformativo <<abstract>> {
+        # titulo : String
+        # descricao : String
+        # imagem : String
+    }
+
+    class DicaAgricola {
+        - id : Number
+        - explicacao : String
+        --
+        + exibirDetalhes() : void
+    }
+}
+
+
+
+
+class MensagemContato <<Fale Conosco>> {
+    - nome : String
+    - email : String
+    - mensagem : String
+    --
+    + validar() : Map<String, String>
+    + enviar() : void
+}
+
+
+
+Safra "  1  " *-- "  0..*  " Atividade : possui >
+Consultor "  1  " *-- "  1..*  " Pergunta : contém >
+Pergunta "  1  " *-- "  3..*  " Opcao : contém >
+
+Safra "  0..*  " -- "  1  " Cultura : cultiva >
+CalculadoraProducao --> "  1  " Cultura : simula com
+Consultor --> "  1..3  " Solucao : recomenda
+Opcao -right-> "  1  " Solucao : pontua
+
+CalculadoraProducao ..> Safra : pré-preenche >
+
+ConteudoInformativo <|-- Solucao
+ConteudoInformativo <|-- DicaAgricola
+
+@enduml
