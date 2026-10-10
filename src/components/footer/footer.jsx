@@ -37,7 +37,7 @@ export default function Footer(){
                     <div className="col-12 col-lg footer-pitch text-center">
                         <p className="footer-pitch-titulo footer-titulo mb-3">PITCH VÍDEO</p>
 
-                        <a href="https://youtu.be/KV4qb1ZjpWI" target="_blank" rel="noopener noreferrer"
+                        <a href="https://youtu.be/JQnHjSj205o" target="_blank" rel="noopener noreferrer"
                            className="footer-pitch-link d-flex align-items-center text-decoration-none justify-content-center">
                             <i className="bi bi-play-circle-fill"></i>
                             <div className="d-flex flex-column text-start">
